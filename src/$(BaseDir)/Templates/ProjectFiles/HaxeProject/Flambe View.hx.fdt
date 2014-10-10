@@ -1,0 +1,23 @@
+package $(Package);
+
+import core.resource.Resources;
+import core.ui.View;
+
+/**
+$(CBI)* This represents a view of the game.
+$(CBI)* @author $(DefaultUser)
+$(CBI)*/
+class $(FileName) extends View $(CSLB){
+    
+    var model:Model;
+
+    public function new(resources:Resources, model:Model) $(CSLB){
+        super(resources);
+        this.model = model;
+    }
+
+    override public function init():Void $(CSLB){
+        $(EntryPoint)
+    }
+	
+}

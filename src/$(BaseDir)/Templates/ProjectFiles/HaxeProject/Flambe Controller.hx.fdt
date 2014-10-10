@@ -1,0 +1,22 @@
+package $(Package);
+import core.Context;
+import core.ui.Controller;
+
+/**
+$(CBI)* This represents a state of the game.
+$(CBI)* @author $(DefaultUser)
+$(CBI)*/
+class $(FileName) extends Controller $(CSLB){
+    
+    var view:$(EntryPoint)View;
+
+	public function new(context:Context) $(CSLB){
+        super(context);
+        setupView();
+    }
+
+    function setupView() $(CSLB){
+        view = new View(context.resources);
+    }
+
+}
