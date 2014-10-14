@@ -1,4 +1,5 @@
 package $(Package);
+
 import core.Context;
 import core.ui.Controller;
 
@@ -9,14 +10,19 @@ $(CBI)*/
 class $(FileName) extends Controller $(CSLB){
     
     var view:$(EntryPoint)View;
+    var model:Model;
 
-	public function new(context:Context) $(CSLB){
+	public function new(context:Context, model:Model) $(CSLB){
         super(context);
-        setupView();
+        this.model = model;
     }
 
-    function setupView() $(CSLB){
-        view = new View(context.resources);
+    override function setupView() $(CSLB){
+        view = new View(context.resources, model);
+    }
+
+    override public function activate():Void $(CSLB){
+        showView(view);
     }
 
 }

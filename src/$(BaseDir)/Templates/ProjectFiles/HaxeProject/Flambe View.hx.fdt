@@ -9,15 +9,16 @@ $(CBI)* @author $(DefaultUser)
 $(CBI)*/
 class $(FileName) extends View $(CSLB){
     
-    var model:Model;
+    var model:$(EntryPoint)Model;
 
     public function new(resources:Resources, model:Model) $(CSLB){
         super(resources);
         this.model = model;
     }
 
-    override public function init():Void $(CSLB){
-        $(EntryPoint)
+    override public function show():Void $(CSLB){
+        super.show();
+        // create widgets here
     }
 	
 }
